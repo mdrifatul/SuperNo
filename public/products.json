@@ -1,0 +1,98 @@
+[
+  {
+    "id": "1",
+    "img": "/public/images/mobile.jpg",
+    "title": "Apple iPhone 15",
+    "category": "mobile",
+    "brand": ["mobile", "apple", "iphone"],
+    "price": 999
+  },
+  {
+    "id": "2",
+    "img": "/public/images/mobile1.jpg",
+    "title": "Samsung Galaxy S23",
+    "category": "mobile",
+    "brand": ["mobile", "samsung"],
+    "price": 899
+  },
+  {
+    "id": "3",
+    "img": "/public/images/mobile2.jpg",
+    "title": "Apple iPhone 14",
+    "category": "mobile",
+    "brand": ["mobile", "apple", "iphone"],
+    "price": 799
+  },
+  {
+    "id": "4",
+    "img": "/public/images/keyboard.jpg",
+    "title": "Apple K1",
+    "category": "keyboard",
+    "brand": ["keyboard", "apple"],
+    "price": 55
+  },
+  {
+    "id": "5",
+    "img": "/public/images/keyboard1.jpg",
+    "title": "SteelSeries Apex Pro",
+    "category": "keyboard",
+    "brand": ["keyboard", "logitech"],
+    "price": 60
+  },
+  {
+    "id": "6",
+    "img": "/public/images/keyboard3.jpg",
+    "title": "Logitech G Pro X",
+    "category": "keyboard",
+    "brand": ["keyboard", "logitech"],
+    "price": 40
+  },
+  {
+    "id": "7",
+    "img": "/public/images/watch.jpg",
+    "title": "Apple Watch Series 8",
+    "category": "watch",
+    "brand": ["clock", "apple", "watch"],
+    "price": 399
+  },
+  {
+    "id": "8",
+    "img": "/public/images/watch1.jpg",
+    "title": "Google Watch 6",
+    "category": "watch",
+    "brand": ["clock", "google", "watch"],
+    "price": 349
+  },
+  {
+    "id": "9",
+    "img": "/public/images/watch2.jpg",
+    "title": "Garmin Venu 3",
+    "category": "watch",
+    "brand": ["clock", "samsung", "watch"],
+    "price": 299
+  },
+  {
+    "id": "10",
+    "img": "/public/images/laptop.png",
+    "title": "Apple MacBook Pro",
+    "category": "laptop",
+    "brand": ["laptop", "apple", "computer"],
+    "price": 2500
+  },
+  {
+    "id": "11",
+    "img": "/public/images/laptop1.jpg",
+    "title": "HP XPS 13",
+    "category": "laptop",
+    "brand": ["laptop", "hp", "computer"],
+    "price": 1800
+  },
+  {
+    "id": "12",
+    "img": "/public/images/laptop2.jpg",
+    "title": "Dell Spectre x360",
+    "category": "laptop",
+    "brand": ["laptop", "hp", "computer"],
+    "price": 1500
+  }
+]

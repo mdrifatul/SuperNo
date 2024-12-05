@@ -1,0 +1,102 @@
+{
+  "user": [
+    {
+      "id": "d5f5",
+      "img": "/public/images/mobile1.jpg",
+      "price": 899,
+      "title": "Samsung Galaxy S23",
+      "date": "2024-12-05T16:18:09.011Z"
+    },
+    {
+      "id": "b36d",
+      "img": "/public/images/keyboard.jpg",
+      "price": 55,
+      "title": "Apple K1",
+      "date": "2024-12-05T16:19:40.819Z"
+    },
+    {
+      "id": "07d3",
+      "img": "/public/images/keyboard.jpg",
+      "price": 55,
+      "title": "Apple K1",
+      "date": "2024-12-05T16:19:45.042Z"
+    },
+    {
+      "id": "1b84",
+      "img": "/public/images/watch.jpg",
+      "price": 399,
+      "title": "Apple Watch Series 8",
+      "date": "2024-12-05T16:20:11.153Z"
+    },
+    {
+      "id": "ab68",
+      "img": "/public/images/watch.jpg",
+      "price": 399,
+      "title": "Apple Watch Series 8",
+      "date": "2024-12-05T16:21:37.160Z"
+    },
+    {
+      "id": "7dfd",
+      "img": "/public/images/watch.jpg",
+      "price": 399,
+      "title": "Apple Watch Series 8",
+      "date": "2024-12-05T16:21:39.633Z"
+    },
+    {
+      "id": "6827",
+      "img": "/public/images/watch.jpg",
+      "price": 399,
+      "title": "Apple Watch Series 8",
+      "date": "2024-12-05T16:22:22.908Z"
+    },
+    {
+      "id": "0339",
+      "img": "/public/images/watch.jpg",
+      "price": 399,
+      "title": "Apple Watch Series 8",
+      "date": "2024-12-05T16:23:40.500Z"
+    },
+    {
+      "id": "ce78",
+      "img": "/public/images/watch1.jpg",
+      "price": 349,
+      "title": "Google Watch 6",
+      "date": "2024-12-05T16:23:54.492Z"
+    },
+    {
+      "id": "d147",
+      "img": "/public/images/watch1.jpg",
+      "price": 349,
+      "title": "Google Watch 6",
+      "date": "2024-12-05T16:24:48.479Z"
+    },
+    {
+      "id": "f8ae",
+      "img": "/public/images/laptop1.jpg",
+      "price": 1800,
+      "title": "HP XPS 13",
+      "date": "2024-12-05T16:25:24.735Z"
+    },
+    {
+      "id": "e072",
+      "img": "/public/images/laptop2.jpg",
+      "price": 1500,
+      "title": "Dell Spectre x360",
+      "date": "2024-12-05T17:17:47.247Z"
+    },
+    {
+      "id": "e1ee",
+      "img": "/public/images/watch1.jpg",
+      "price": 349,
+      "title": "Google Watch 6",
+      "date": "2024-12-05T17:18:14.560Z"
+    },
+    {
+      "id": "f535",
+      "img": "/public/images/mobile2.jpg",
+      "price": 799,
+      "title": "Apple iPhone 14",
+      "date": "2024-12-05T17:23:52.365Z"
+    }
+  ]
+}
