@@ -2,7 +2,7 @@
 
 # Introduction
 
-SuperNo is an innovative platform that integrates advanced e-commerce tools, AI-powered analytics, seamless payment solutions, and social connectivity. It delivers a user-friendly interface, offering an engaging and responsive experience for modern online shopping.
+SuperNo is an innovative e-commerce platform that combines advanced shopping tools, secure payment solutions, and social connectivity. It provides an intuitive and responsive interface for a seamless online shopping journey. Fully optimized for all devices, SuperNo ensures smooth navigation across desktops, tablets, and smartphones, with a layout that adapts to different screen sizes for optimal viewing and effortless interaction
 
 # Features
 
@@ -26,3 +26,15 @@ The home page features a wide selection of e-commerce products, providing an eng
 # Payment
 
 Each product on the website has a "Buy Now" button. When clicked, a Stripe payment form appears, allowing users to securely pay using their credit or debit card. Upon successful payment, the product details are stored in the order.json file, and users can view their orders on the Order page.
+
+# Sign Up and Login
+
+To make a payment, users must first sign up and log in. Firebase Authentication is used for secure sign-up and login processes. After logging in, users can click on their profile image to access a dropdown menu, which includes options to view their profile and log out of their account. This feature ensures a secure and personalized user experience.
+
+# Profile
+
+In the profile section, users can view their account information, which is fetched directly from their Firebase account. This allows users to see their registered details, such as name, email, and profile picture, providing a seamless and personalized experience.
+
+# Order
+
+The order section allows users to view a list of products they have purchased. This data is fetched from the order.json file, where the order details are stored after a successful payment. It provides a convenient way for users to track their past purchases.
