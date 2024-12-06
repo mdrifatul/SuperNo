@@ -6,7 +6,7 @@ const Account = () => {
   console.log(user);
   return (
     <div className="mt-24 w-full flex justify-center items-center rounded-none">
-      <div className="card card-compact bg-base-100 md:w-[40rem] flex md:flex-row-reverse shadow-xl shadow-slate-300 rounded-none">
+      <div className="card card-compact bg-base-100 w-full md:w-[40rem] flex md:flex-row-reverse shadow-xl shadow-slate-300 rounded-none">
         <figure className="rounded-none">
           <img
             className="md:w-60 md:h-80"

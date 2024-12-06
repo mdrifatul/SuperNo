@@ -35,7 +35,7 @@ const Profile = () => {
       {!openNav && (
         <button 
           onClick={() => setOpenNav(true)} 
-          className="fixed top-4 left-4 z-40 bg-white p-2 rounded-lg lg:hidden"
+          className="fixed top-4 left-4 z-40 bg-[#0776a6] text-white p-2 rounded-lg lg:hidden"
         >
           <FaBars className="text-lg" />
         </button>
