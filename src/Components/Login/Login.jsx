@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router";
+import { toast } from "react-toastify";
 import useAuth from "../../Hooks/useAuth";
 
 const Login = () => {
@@ -34,19 +35,18 @@ const Login = () => {
   const handleGoogleSignin = () =>{
     signInWithGoogle()
     .then(result =>{
-      // console.log(result.user);
       result.user
-      // const googleuserInfo = {
-      //   name : result.user?.displayName,
-      //   email: result.user?.email,
-      //   image: result.user?.photoURL,
-      //   role: "User"
-      // }
-      // axios.post('/users',googleuserInfo)
-      // .then(res =>{
-      //   console.log(res.data);
-      // })
-      navigate(location?.state ? location.state : '/')
+      toast.success('Log In successful!', {
+        position: "top-center",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+      setTimeout(() => {
+        navigate(location?.state ? location.state : '/')
+      }, 1600); 
     })
   .catch(error =>{
     console.error(error);

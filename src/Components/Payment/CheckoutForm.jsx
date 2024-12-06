@@ -2,6 +2,7 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import { toast } from 'react-toastify';
 import './style.css';
 
 const CheckoutForm = ({details}) => {
@@ -44,7 +45,18 @@ const CheckoutForm = ({details}) => {
         const res = await axios.post("http://localhost:5000/user", payment);
         console.log("payment saved", res.data);
         if(res.data?.id || res.data?.insertedId){
-          navigate("/");
+          toast.success('Payment successful!', {
+            position: "top-center",
+            autoClose: 1500,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+          });
+          
+          setTimeout(() => {
+            navigate("/");
+          }, 1600);
         }
       }else{
         console.log("Payment error", error);

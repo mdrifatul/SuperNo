@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router";
+import { toast } from "react-toastify";
 import useAuth from "../../Hooks/useAuth";
 
 const Signup = () => {
@@ -18,28 +19,20 @@ const Signup = () => {
     console.log(data);
     createUser( data.email, data.password)
       .then((result) => {
-        // const user = result.user
         result.user
         reset();
-        // updateUserProfile(data.name, data.PhotoURL)
-        //   .then(() => {
-        //     const userInfo = {
-        //       name: data.name,
-        //       email: data.email,
-        //       image: data.PhotoURL,
-        //       role: "User"
-        //     };
-        //     axios.post("/user.json", userInfo)
-        //     .then((res) => {
-        //       if (res.data.insertedId) {
-        //         reset();
-        //       }
-        //     });
-        //   })
-        //   .catch((error) => {
-        //     console.log(error);
-        //   });
-        navigate("/");
+        toast.success('Sign Up successful!', {
+          position: "top-center",
+          autoClose: 1500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
+        
+        setTimeout(() => {
+          navigate("/");
+        }, 1600);
       })
       .catch((error) => {
         console.error(error);
