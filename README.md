@@ -2,7 +2,11 @@
 
 # Introduction
 
-SuperNo is an innovative e-commerce platform that combines advanced shopping tools, secure payment solutions, and social connectivity. It provides an intuitive and responsive interface for a seamless online shopping journey. Fully optimized for all devices, SuperNo ensures smooth navigation across desktops, tablets, and smartphones, with a layout that adapts to different screen sizes for optimal viewing and effortless interaction
+SuperNo is an innovative e-commerce platform that combines advanced shopping tools, secure payment solutions, and social connectivity. It provides an intuitive and responsive interface for a seamless online shopping journey. Fully optimized for all devices, SuperNo ensures smooth navigation across desktops, tablets, and smartphones, with a layout that adapts to different screen sizes for optimal viewing and effortless interaction.
+
+This project uses JSON Server to simulate backend API functionality. To start the server, run the following command in the project directory:
+
+\*\*json-server -w public/order.json -p 5000
 
 # Features
 
@@ -13,12 +17,6 @@ SuperNo is an innovative e-commerce platform that combines advanced shopping too
 # Technology
 
 -React, Tailwind, TanStack Query, Firebase, DaisyUi,
-
-# Environment Variables
-
-This project uses JSON Server to simulate backend API functionality. To start the server, run the following command in the project directory:
-
-- json-server -w public/order.json -p 5000
 
 # Home Page
 
@@ -34,7 +32,7 @@ To make a payment, users must first sign up and log in. Firebase Authentication 
 
 # Profile
 
-In the profile section, users can view their account information, which is fetched directly from their Firebase account. This allows users to see their registered details, such as name, email, and profile picture, providing a seamless and personalized experience.
+Profile: The profile page displays user information, allowing you to view your details. You also have the option to update your information directly from this page, ensuring your profile remains current and accurate.
 
 # Order
 
