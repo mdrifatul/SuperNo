@@ -6,7 +6,9 @@ SuperNo is an innovative e-commerce platform that combines advanced shopping too
 
 This project uses JSON Server to simulate backend API functionality. To start the server, run the following command in the project directory:
 
-\*\*json-server -w public/order.json -p 5000
+```bash
+json-server -w public/order.json -p 5000
+```
 
 # Features
 
