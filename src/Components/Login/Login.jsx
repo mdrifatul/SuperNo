@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
@@ -24,6 +25,14 @@ const Login = () => {
     .then(result =>{
         console.log(result.user);
         reset();
+        toast.success('Log In successful!', {
+          position: "top-center",
+          autoClose: 1500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
         navigate(location?.state ? location.state : '/')
     })
     .catch(error =>{
@@ -35,18 +44,23 @@ const Login = () => {
   const handleGoogleSignin = () =>{
     signInWithGoogle()
     .then(result =>{
-      result.user
-      toast.success('Log In successful!', {
-        position: "top-center",
-        autoClose: 1500,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-      });
-      setTimeout(() => {
-        navigate(location?.state ? location.state : '/')
-      }, 1600); 
+      const googleuserInfo = {
+        name : result.user?.displayName,
+        email: result.user?.email,
+        img: result.user?.photoURL,
+      }
+      axios.post('http://localhost:5000/user',googleuserInfo)
+      .then(res =>{
+        toast.success('Sign Up successful!', {
+          position: "top-center",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
+      })
+      navigate('/') 
     })
   .catch(error =>{
     console.error(error);
@@ -61,7 +75,7 @@ const Login = () => {
         </h2>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="w-4/5 md:w-1/3 mx-auto"
+          className="w-4/5 md:w-3/6 lg:w-2/6 mx-auto"
         >
           <div className="form-control">
             <label className="label">

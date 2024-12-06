@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router";
@@ -5,7 +6,7 @@ import { toast } from "react-toastify";
 import useAuth from "../../Hooks/useAuth";
 
 const Signup = () => {
-  const { createUser, updateUserProfile,signInWithGoogle } = useAuth();
+  const { createUser, signInWithGoogle } = useAuth();
   const navigate= useNavigate();
 
   const {
@@ -16,23 +17,28 @@ const Signup = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
     createUser( data.email, data.password)
       .then((result) => {
         result.user
         reset();
-        toast.success('Sign Up successful!', {
-          position: "top-center",
-          autoClose: 1500,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-        });
-        
-        setTimeout(() => {
-          navigate("/");
-        }, 1600);
+        const userInfo = {
+          name: data?.name,
+          email: data?.email,
+          image: data?.PhotoURL,
+        };
+        const res = axios.post("http://localhost:5000/user", userInfo)
+          if (res) {
+            reset();
+            toast.success('Sign Up successful!', {
+              position: "top-center",
+              autoClose: 1000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+            });
+              navigate("/");
+          }
       })
       .catch((error) => {
         console.error(error);
@@ -42,19 +48,23 @@ const Signup = () => {
   const handleGoogleSignin = () =>{
     signInWithGoogle()
     .then(result =>{
-      result.user
-      console.log(result.user);
-      // const googleuserInfo = {
-      //   name : result.user?.displayName,
-      //   email: result.user?.email,
-      //   image: result.user?.photoURL,
-      //   role: "User"
-      // }
-      // axiosPublic.post('/users',googleuserInfo)
-      // .then(res =>{
-      //   console.log(res.data);
-      // })
-      navigate('/')  
+      const googleuserInfo = {
+        name : result.user?.displayName,
+        email: result.user?.email,
+        img: result.user?.photoURL,
+      }
+      axios.post('http://localhost:5000/user',googleuserInfo)
+      .then(res =>{
+        toast.success('Sign Up successful!', {
+          position: "top-center",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
+      })
+      navigate('/')   
     })
   .catch(error =>{
     console.error(error);
@@ -69,7 +79,7 @@ const Signup = () => {
         <h2 className="text-3xl my-3 text-center font-bold text-[#0776a6]">SIGN UP</h2>
         <form
         onSubmit={handleSubmit(onSubmit)}
-          className="w-4/5 md:w-1/4 mx-auto"
+          className="w-4/5 md:w-3/6 lg:w-2/6 mx-auto"
         >
           <div className="form-control">
             <label className="label">

@@ -1,1 +1,61 @@
-[]
+{
+  "user": [
+    {
+      "name": "rifat",
+      "email": "rifat@gmail.com",
+      "img": "",
+      "address": "chattogram",
+      "phone": "01801430423",
+      "zip": "3432",
+      "id": "88e0"
+    },
+    {
+      "id": "144d",
+      "name": "rifat",
+      "email": "a@gmail.com",
+      "image": ""
+    },
+    {
+      "id": "1dff",
+      "name": "Rifat",
+      "email": "Rifat0@gmail.com",
+      "image": ""
+    },
+    {
+      "id": "440d",
+      "name": "rifat",
+      "email": "rifat1@gmail.com",
+      "image": ""
+    },
+    {
+      "id": "47f6",
+      "name": "rifat",
+      "email": "rifat12@gmail.com",
+      "image": ""
+    },
+    {
+      "id": "912f",
+      "name": "rifat",
+      "email": "rifat08@gmail.com",
+      "image": ""
+    },
+    {
+      "name": "Arfat",
+      "email": "arfat@gmail.com",
+      "image": "",
+      "address": "ctg",
+      "phone": "0125483652",
+      "zip": "14",
+      "id": "5d15"
+    },
+    {
+      "name": "",
+      "email": "rifatulislam987@gmail.com",
+      "image": "",
+      "address": "chittagong",
+      "phone": "1521",
+      "zip": "254",
+      "id": "38ac"
+    }
+  ]
+}

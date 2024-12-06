@@ -42,7 +42,7 @@ const CheckoutForm = ({details}) => {
           title:title,
           date: new Date()
         };
-        const res = await axios.post("http://localhost:5000/user", payment);
+        const res = await axios.post("http://localhost:5000/order", payment);
         console.log("payment saved", res.data);
         if(res.data?.id || res.data?.insertedId){
           toast.success('Payment successful!', {
@@ -56,7 +56,7 @@ const CheckoutForm = ({details}) => {
           
           setTimeout(() => {
             navigate("/");
-          }, 1600);
+          }, 100);
         }
       }else{
         console.log("Payment error", error);

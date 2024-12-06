@@ -3,13 +3,12 @@ import axios from "axios";
 
 const Order = () => {
   const { data: orders = [] } = useQuery({
-    queryKey: ["contest"],
+    queryKey: ["orders"],
     queryFn: async () => {
       const res = await axios.get(`/order.json`);
-      return res.data?.user;
+      return res.data?.order;
     },
   });
-  console.log(orders);
 
   return (
     <div className="">
@@ -23,7 +22,7 @@ const Order = () => {
           </tr>
         </thead>
         <tbody>
-          {orders.map(order =>(<tr>
+          {orders.map(order =>(<tr key={order.id}>
             <td>
               <div className="flex items-center gap-3">
                 <div className="avatar">
